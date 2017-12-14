@@ -89,6 +89,7 @@ class Point(object):
 
 
 
+
 def run_test_init():
     """
     Tests the   __init__   method of the Point class.
