@@ -51,6 +51,9 @@ class Point(object):
         self.x = x
         self.y = y
         self.moves = 0
+        self.old_x = x
+        self.old_y = y
+        self.change = 0
 
     def __repr__(self):
         return 'Point({}, {})'. format(self.x, self.y)
@@ -58,10 +61,18 @@ class Point(object):
     def clone(self):
         return Point(self.x, self.y)
 
+    def get_distance_from(self, point):
+        change_x = (self.x - point.x) ** 2
+        change_y = (self.y - point.y) ** 2
+        return math.sqrt(change_y + change_x)
+
     def move_to(self,new_x,new_y):
+        old_x = self.x
+        old_y = self.y
         self.x = new_x
         self.y = new_y
         self.moves = self.moves + 1
+        self.change = self.change + self.get_distance_from(Point(old_x,old_y), Point(new_x, new_y))
 
 
     def move_by(self,dx,dy):
@@ -73,12 +84,15 @@ class Point(object):
     def get_number_of_moves_made(self):
         return self.moves
 
-    def get_distance_from(self, point):
-        change_x = (self.x - point.x) ** 2
-        change_y = (self.y - point.y) ** 2
-        return math.sqrt(change_y + change_x)
 
     def get_distance_from_start(self):
+        change_x = (self.x - self.old_x) ** 2
+        change_y = (self.y - self.old_y) ** 2
+        return math.sqrt(change_y + change_x)
+
+    def get_distance_traveled(self):
+
+
 
 
 
@@ -902,6 +916,34 @@ def run_test_get_distance_traveled():
     print('Testing the   get_distance_traveled   method')
     print('of the Point class.')
     print('-----------------------------------------------------------')
+
+    p1 = Point(20, 30)
+    p1.move_to(21, 30)
+    p1.move_to(21, 38)
+    print()
+    print('Expected p1 has traveled 9.0')
+    print('Actual:', p1.get_distance_traveled())
+
+    p1.move_by(1, 1)
+    print()
+    print('Expected p1 has now traveled about 10.414')
+    print('Actual:', p1.get_distance_traveled())
+
+    p2 = Point(0, 0)
+    p3 = Point(100, 22)
+    p4 = Point(0, 555)
+    for k in range(100):
+        p2.move_by(0, k + 1)
+        p3.move_by(k + 1, 0)
+        p4.move_to(k + 1, 555)
+
+    print()
+    print('Expected p2 has now traveled', 101 * 50.0)
+    print('Actual:', p2.get_distance_traveled())
+    print('Expected p3 has now traveled', 101 * 50.0)
+    print('Actual:', p3.get_distance_traveled())
+    print('Expected p4 has now traveled 100.0')
+    print('Actual:', p4.get_distance_traveled())
 
 
 def run_test_closer_to():
