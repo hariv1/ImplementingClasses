@@ -27,7 +27,7 @@ def main():
 ########################################################################
 
 # ----------------------------------------------------------------------
-# TODO: 2. With your instructor, READ THE INSTRUCTIONS
+# DONE: 2. With your instructor, READ THE INSTRUCTIONS
 #   in file  m0_INSTRUCTIONS.txt, asking questions as needed.
 #
 #   Then implement a class called   Point   that has NO METHODS yet,
@@ -106,6 +106,11 @@ class Point(object):
         else:
             return p2
 
+    def halfway_to(self,p2):
+        new_point_x = (self.x + p2.x)/2
+        new_point_y = (self.y + p2.y)/2
+        return Point(new_point_x,new_point_y)
+
 
 
 
@@ -168,7 +173,7 @@ def run_test_init():
         print('Actual for p2:  ', p2.x, p2.y)
     """
     # ------------------------------------------------------------------
-    # TODO: 3.
+    # DONE: 3.
     #   a. Read the above specification of the   __init__   method.
     #        Do NOT proceed until you understand WHAT it should do
     #        (but not necessarily HOW it will do it).
@@ -259,7 +264,7 @@ def run_test_repr():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # TODO: 4.  Follow the same instructions as in TODO 3 above,
+    # DONE: 4.  Follow the same instructions as in TODO 3 above,
     #           but for the  __repr__  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -339,7 +344,7 @@ def run_test_clone():
         print('Actual for p3:  ', p3)
    """
     # ------------------------------------------------------------------
-    # TODO: 5.  Follow the same instructions as in TODO 3 above,
+    # DONE: 5.  Follow the same instructions as in TODO 3 above,
     #           but for the  clone  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -434,7 +439,7 @@ def run_test_move_to():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # TODO: 6.  Follow the same instructions as in TODO 3 above,
+    # DONE: 6.  Follow the same instructions as in TODO 3 above,
     #           but for the  move_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -630,7 +635,7 @@ def run_test_get_number_of_moves_made():
         print('Actual for p2 moves made:  ', p2.get_number_of_moves_made())
     """
     # ------------------------------------------------------------------
-    # TODO: 8.  Follow the same instructions as in TODO 3 above,
+    # DONE: 8.  Follow the same instructions as in TODO 3 above,
     #    but for the  get_number_of_moves_made  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -746,7 +751,7 @@ def run_test_get_distance_from():
         print('Actual   p2 to p4:', p2.get_distance_from(p4))
     """
     # ------------------------------------------------------------------
-    # TODO: 9.  Follow the same instructions as in TODO 3 above,
+    # DONE: 9.  Follow the same instructions as in TODO 3 above,
     #    but for the  get_distance_from  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -841,7 +846,7 @@ def run_test_get_distance_from_start():
         print('Actually is:', p2.get_distance_from_start())
     """
     # ------------------------------------------------------------------
-    # TODO: 10.  Follow the same instructions as in TODO 3 above,
+    # DONE: 10.  Follow the same instructions as in TODO 3 above,
     #    but for the  get_distance_from_START  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -925,7 +930,7 @@ def run_test_get_distance_traveled():
         print('Actual:', p4.get_distance_traveled())
     """
     # ------------------------------------------------------------------
-    # TODO: 11.  Follow the same instructions as in TODO 3 above,
+    # DONE: 11.  Follow the same instructions as in TODO 3 above,
     #    but for the  get_distance_traveled  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -1010,7 +1015,7 @@ def run_test_closer_to():
         print('Actual:  ', p1.closer_to(p4, p5) is p5)
     """
     # ------------------------------------------------------------------
-    # TODO: 12.  Follow the same instructions as in TODO 3 above,
+    # DONE: 12.  Follow the same instructions as in TODO 3 above,
     #    but for the  closer_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -1094,13 +1099,39 @@ def run_test_halfway_to():
 
     """
     # ------------------------------------------------------------------
-    # TODO: 13.  Follow the same instructions as in TODO 3 above,
+    # DONE: 13.  Follow the same instructions as in TODO 3 above,
     #    but for the  halfway_to  method specified above.
     # ------------------------------------------------------------------
     print()
     print('-----------------------------------------------------------')
     print('Testing the   halfway_to   method of the Point class.')
     print('-----------------------------------------------------------')
+
+    p1 = Point(10, 20)
+    p2 = Point(30, 100)
+
+    print()
+    print('Should be: Point(20.0, 60.0)')
+    print('Actual is:', p1.halfway_to(p2))
+    print('Should be: Point(20.0, 60.0)')
+    print('Actual is:', p2.halfway_to(p1))
+
+    print()
+    print('Should be: Point(10.0, 20.0)')
+    print('Actual is:', p1.halfway_to(p1))
+
+    p3 = Point(-10, 20)
+    p4 = Point(30, -100)
+
+    print()
+    print('Should be: Point(10.0, -40.0)')
+    print('Actual is:', p3.halfway_to(p4))
+    print('Should be: Point(10.0, -40.0)')
+    print('Actual is:', p3.halfway_to(p4))
+
+    print()
+    print('Should be: Point(-10.0, 20.0)')
+    print('Actual is:', p3.halfway_to(p3))
 
 
 # ----------------------------------------------------------------------
