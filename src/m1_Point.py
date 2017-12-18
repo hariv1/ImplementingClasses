@@ -71,14 +71,16 @@ class Point(object):
         old_y = self.y
         self.x = new_x
         self.y = new_y
-        self.moves = self.moves + 1
-        self.change = self.change + self.get_distance_from(Point(old_x,old_y), Point(new_x, new_y))
+        self.moves = self.moves +1
+        self.change = self.change + self.get_distance_from(Point(old_x,old_y))
+
 
 
     def move_by(self,dx,dy):
         self.x = self.x + dx
         self.y = self.y + dy
-        self.moves = self.moves + 1
+        self.moves = self.moves +1
+        self.change = self.change + math.sqrt((dx**2)+(dy**2))
 
 
     def get_number_of_moves_made(self):
@@ -91,6 +93,8 @@ class Point(object):
         return math.sqrt(change_y + change_x)
 
     def get_distance_traveled(self):
+        return self.change
+
 
 
 
