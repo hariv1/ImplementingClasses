@@ -264,7 +264,7 @@ def run_test_repr():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # DONE: 4.  Follow the same instructions as in TODO 3 above,
+    # DONE: 4.  Follow the same instructions as in DONE 3 above,
     #           but for the  __repr__  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -344,7 +344,7 @@ def run_test_clone():
         print('Actual for p3:  ', p3)
    """
     # ------------------------------------------------------------------
-    # DONE: 5.  Follow the same instructions as in TODO 3 above,
+    # DONE: 5.  Follow the same instructions as in DONE 3 above,
     #           but for the  clone  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -439,7 +439,7 @@ def run_test_move_to():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # DONE: 6.  Follow the same instructions as in TODO 3 above,
+    # DONE: 6.  Follow the same instructions as in DONE 3 above,
     #           but for the  move_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -529,7 +529,7 @@ def run_test_move_by():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # TODO: 7.  Follow the same instructions as in TODO 3 above,
+    # DONE: 7.  Follow the same instructions as in DONE 3 above,
     #           but for the  move_by  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -635,7 +635,7 @@ def run_test_get_number_of_moves_made():
         print('Actual for p2 moves made:  ', p2.get_number_of_moves_made())
     """
     # ------------------------------------------------------------------
-    # DONE: 8.  Follow the same instructions as in TODO 3 above,
+    # DONE: 8.  Follow the same instructions as in DONE 3 above,
     #    but for the  get_number_of_moves_made  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -751,7 +751,7 @@ def run_test_get_distance_from():
         print('Actual   p2 to p4:', p2.get_distance_from(p4))
     """
     # ------------------------------------------------------------------
-    # DONE: 9.  Follow the same instructions as in TODO 3 above,
+    # DONE: 9.  Follow the same instructions as in DONE 3 above,
     #    but for the  get_distance_from  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -846,7 +846,7 @@ def run_test_get_distance_from_start():
         print('Actually is:', p2.get_distance_from_start())
     """
     # ------------------------------------------------------------------
-    # DONE: 10.  Follow the same instructions as in TODO 3 above,
+    # DONE: 10.  Follow the same instructions as in DONE 3 above,
     #    but for the  get_distance_from_START  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -930,7 +930,7 @@ def run_test_get_distance_traveled():
         print('Actual:', p4.get_distance_traveled())
     """
     # ------------------------------------------------------------------
-    # DONE: 11.  Follow the same instructions as in TODO 3 above,
+    # DONE: 11.  Follow the same instructions as in DONE 3 above,
     #    but for the  get_distance_traveled  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -1015,7 +1015,7 @@ def run_test_closer_to():
         print('Actual:  ', p1.closer_to(p4, p5) is p5)
     """
     # ------------------------------------------------------------------
-    # DONE: 12.  Follow the same instructions as in TODO 3 above,
+    # DONE: 12.  Follow the same instructions as in DONE 3 above,
     #    but for the  closer_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -1099,7 +1099,7 @@ def run_test_halfway_to():
 
     """
     # ------------------------------------------------------------------
-    # DONE: 13.  Follow the same instructions as in TODO 3 above,
+    # DONE: 13.  Follow the same instructions as in DONE 3 above,
     #    but for the  halfway_to  method specified above.
     # ------------------------------------------------------------------
     print()
